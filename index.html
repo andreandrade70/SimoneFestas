@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cardápio com Imagens</title>
+  <style>
+    /* Estilos Gerais do Corpo da Página */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f2;
+      padding: 20px;
+      color: #333;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Estilos para a Logo */
+    .logo-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo-container img {
+      max-width: 180px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Estilos para Título Principal (h1) */
+    h1 {
+      text-align: center;
+      color: #bf360c;
+      margin-bottom: 40px;
+    }
+
+    /* Estilos para Títulos de Seção (h2) */
+    h2 {
+      background-color: #ffccbc;
+      padding: 10px;
+      border-left: 5px solid #d84315;
+      margin-top: 40px;
+    }
+
+    /* Estilos para os Cards de Itens do Cardápio */
+    .card {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 15px;
+    }
+
+    .info h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .info p {
+      margin: 5px 0 0;
+      color: #388e3c;
+      font-weight: bold;
+    }
+
+    .whatsapp-button {
+      display: block;
+      margin: 40px auto 0;
+      padding: 15px 20px;
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 18px;
+      text-decoration: none;
+      max-width: 400px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .card img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <img src="imagens/simone.png" alt="Simone Festas">
+  </div>
+
+  <h1>Cardápio Digital</h1>
+
+  <h2>🥟 Salgados Fritos</h2>
+  <div class="card">
+    <img src="imagens/coxinha_grande.jpeg" alt="Coxinha de Frango Grande">
+    <div class="info">
+      <h3>Coxinha de Frango Grande</h3>
+      <p>R$ 6,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/bolinha_de_queijo.png" alt="Bolinha de queijo">
+    <div class="info">
+      <h3>Bolinha de queijo</h3>
+      <p>R$ 6,00 porção com dez</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/kibe.jpg" alt="kibe">
+    <div class="info">
+      <h3>Kibe Frito</h3>
+      <p>R$ 6,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/pastelcarne.jpeg" alt="pastel de carne">
+    <div class="info">
+      <h3>Pastel Carne</h3>
+      <p>R$ 9,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/pastelq.jpeg" alt="pastel de queijo">
+    <div class="info">
+      <h3>Pastel de Queijo</h3>
+      <p>R$ 8,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/pastelca.jpeg" alt="pastel de camarão">
+    <div class="info">
+      <h3>Pastel de Camarão</h3>
+      <p>R$ 12,00</p>
+    </div>
+  </div>
+
+
+  <h2>🥐 Salgados Assados</h2>
+  <div class="card">
+    <img src="imagens/empadaf.jpg" alt="Empadinha">
+    <div class="info">
+      <h3>Empada de frango</h3>
+      <p>R$ 3,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/empadac.png" alt="Empadinha de camarão">
+    <div class="info">
+      <h3>Empada de camarão</h3>
+      <p>R$ 3,50</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/empadaq.jpg" alt="Empadinha de queijo">
+    <div class="info">
+      <h3>Empada de Queijo</h3>
+      <p>R$ 3,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/joelho.jpg" alt="joelho de queijo e presunto">
+    <div class="info">
+      <h3>Joelho de Queijo e Presunto</h3>
+      <p>R$ 7,00</p>
+    </div>
+  </div>
+
+   <div class="card">
+    <img src="imagens/esfihas.png" alt="esfiha de carne">
+    <div class="info">
+      <h3>Esfiha de Carne</h3>
+      <p>R$ 7,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/hambdefor.jpg" alt="hamburguer de forno">
+    <div class="info">
+      <h3>Hamburguer de Forno</h3>
+      <p>R$ 7,00</p>
+    </div>
+  </div>
+
+   <div class="card">
+    <img src="imagens/empadao_de_camarao.jpg" alt="empadao de camarao">
+    <div class="info">
+      <h3>Empadão de Camarão</h3>
+      <p>R$ 10,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/empadao_de_frango.jpg" alt="empadao de frango">
+    <div class="info">
+      <h3>Empadão de Frango</h3>
+      <p>R$ 8,00</p>
+    </div>
+  </div>
+
+  <h2> Pizzas Salgadas</h2>
+  <div class="card">
+    <img src="imagens/pizza_mussarela.jpeg" alt="pizza mussarela 30 cm">
+    <div class="info">
+      <h3>Pizza Mussarela 30 cm</h3>
+      <p>R$ 25,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/pizza_calabresa.jpeg" alt="pizza calabresa 30 cm">
+    <div class="info">
+      <h3>Pizza Calabresa 30 cm</h3>
+      <p>R$ 28,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/pizza_presunto.jpg" alt="pizza presunto 30 cm">
+    <div class="info">
+      <h3>Pizza Calabresa 30 cm</h3>
+      <p>R$ 28,00</p>
+    </div>
+  </div>
+
+     <h2> Pizzas Promoção</h2>
+  <div class="card">
+    <img src="imagens/pizzas_30cm.png" alt="3 pizzas 30 cm">
+    <div class="info">
+      <h3>3 pizzas de 30 cm por apenas</h3>
+      <p>R$ 70,00</p>
+    </div>
+  </div>
+
+    <h2> Pizzas Brotinho</h2>
+  <div class="card">
+    <img src="imagens/brotinhomuss.jpeg" alt="pizza brotinho mussarela">
+    <div class="info">
+      <h3>Brotinho Mussarela</h3>
+      <p>R$ 8,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/brotinhocal.jpg" alt="pizza brotinho calabresa">
+    <div class="info">
+      <h3>Brotinho calabresa</h3>
+      <p>R$ 10,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/brotinhopres.jpeg" alt="pizza brotinho presunto">
+    <div class="info">
+      <h3>Brotinho Presunto</h3>
+      <p>R$ 10,00</p>
+    </div>
+  </div>
+
+
+
+  <h2>🍰 Doces e Tortas</h2>
+  <div class="card">
+    <img src="imagens/torta_limao.jpg" alt="Torta de Limão">
+    <div class="info">
+      <h3>Torta de Limão fatia</h3>
+      <p>R$ 9,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/torta_maracuja.jpg" alt="Torta de Maracujá">
+    <div class="info">
+      <h3>Torta de Maracujá fatia</h3>
+      <p>R$ 9,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/pudim.jpg" alt="pudim">
+    <div class="info">
+      <h3>Pudim Fatia</h3>
+      <p>R$ 7,00</p>
+    </div>
+  </div>
+
+   <div class="card">
+    <img src="imagens/brigadeirao.jpg" alt="brigadeirao">
+    <div class="info">
+      <h3>Brigadeirão Fatia</h3>
+      <p>R$ 8,00</p>
+    </div>
+  </div>
+
+   <div class="card">
+    <img src="imagens/pave.jpg" alt="pave">
+    <div class="info">
+      <h3>Pavê Fatia</h3>
+      <p>R$ 7,00</p>
+    </div>
+  </div>
+
+   <div class="card">
+    <img src="imagens/bolo_de_chocolate.jpeg" alt="bolo de chocolate">
+    <div class="info">
+      <h3>Bolo de Chocolate Fatia</h3>
+      <p>R$ 9,00</p>
+    </div>
+  </div>
+
+  <h2>🍢 Petiscos</h2>
+  <div class="card">
+    <img src="imagens/batata_frita.png" alt="Batata Frita">
+    <div class="info">
+      <h3>Batata frita</h3>
+      <p>R$ 15,00</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="imagens/torta_salgada.jpg" alt="torta salgada">
+    <div class="info">
+      <h3>Torta Salgada no pote</h3>
+      <p>R$ 8,00 cada</p>
+    </div>
+  </div>
+
+  <h2>🥤 Bebidas</h2>
+  <div class="card">
+    <img src="imagens/refri_latas.png" alt="Refrigerante">
+    <div class="info">
+      <h3>Refrigerante lata</h3>
+      <p>R$ 6,00</p>
+    </div>
+  </div>
+
+  <a class="whatsapp-button" href="https://wa.me/5521971892461?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20do%20cardápio" target="_blank">
+    📲 Fazer pedido no WhatsApp
+  </a>
+
+</body>
+</html>
