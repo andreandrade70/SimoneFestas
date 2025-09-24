@@ -103,6 +103,8 @@
   </div>
 
   <h1>Cardápio Digital</h1>
+   <!-- Barra de busca -->
+  <input type="text" id="searchBar" placeholder="🔍 Buscar no cardápio..." />
 
   <h2>🥟 Salgados Fritos</h2>
   <div class="card">
@@ -269,7 +271,8 @@
     </div>
   </div>
 
-  <h2> Pizzas Salgadas</h2>
+   <!-- 🍕 Pizzas -->
+  <h2>🍕 Pizzas Salgadas</h2>
   <div class="card">
     <img src="imagens/pizza_mussarela.jpeg" alt="pizza mussarela 30 cm">
     <div class="info">
@@ -310,7 +313,8 @@
     </div>
   </div>
 
-     <h2> Pizzas Promoção</h2>
+      <!-- 🍕 Pizzas -->
+  <h2>🍕 Pizzas Promoção</h2>
   <div class="card">
     <img src="imagens/pizzas_30cm.png" alt="3 pizzas 30 cm">
     <div class="info">
@@ -344,7 +348,8 @@
     </div>
   </div>
 
-   <h2>Hamburguers</h2>
+   <!-- 🍔 Hamburguers -->
+  <h2>🍔 Hamburguers</h2>
     <div class="card">
     <img src="imagens/hamburguer2.jpg" alt="Hamburguer">
     <div class="info">
@@ -567,16 +572,66 @@
     </div>
   </div>
 
-     <p align="right">
-  <span style="text-align: right;">
-    <mark> <h3>Simone Festas agradece a sua preferência!!!</h3></mark>
-  </span>
-</p>
-
+    <p style="text-align: right; margin-top: 40px;">
+    <mark><strong>Simone Festas agradece a sua preferência!!!</strong></mark>
+  </p>
 
   <a class="whatsapp-button" href="https://wa.me/5521971892461?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20do%20cardápio" target="_blank">
     📲 Fazer pedido no WhatsApp
   </a>
+  <script>
+  // Função para remover acentos e normalizar texto
+  function normalizarTexto(texto) {
+    return texto
+      .toLowerCase()
+      .normalize("NFD") // separa letras de acentos
+      .replace(/[\u0300-\u036f]/g, "") // remove acentos
+      .replace(/[^\w\s]/gi, ""); // remove emojis e caracteres especiais
+  }
 
-</body>
+  // Filtro de busca
+  const searchBar = document.getElementById("searchBar");
+  searchBar.addEventListener("keyup", function() {
+    const filtro = normalizarTexto(searchBar.value.trim());
+    const secoes = document.querySelectorAll("h2"); // títulos das seções
+
+    secoes.forEach(secao => {
+      const cards = [];
+      let elemento = secao.nextElementSibling;
+
+      // Pega todos os cards depois do h2 até o próximo h2
+      while (elemento && elemento.tagName !== "H2") {
+        if (elemento.classList.contains("card")) {
+          cards.push(elemento);
+        }
+        elemento = elemento.nextElementSibling;
+      }
+
+      let encontrouNaSecao = false;
+
+      // Verifica se o título da seção corresponde
+      const tituloSecao = normalizarTexto(secao.innerText);
+      if (filtro !== "" && tituloSecao.includes(filtro)) {
+        encontrouNaSecao = true;
+      }
+
+      // Verifica os cards dessa seção
+      cards.forEach(card => {
+        const textoCard = normalizarTexto(card.innerText);
+        if (filtro === "" || textoCard.includes(filtro) || encontrouNaSecao) {
+          card.style.display = "flex";
+          encontrouNaSecao = true;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      // Mostra ou esconde o título da seção conforme resultado
+      secao.style.display = encontrouNaSecao || filtro === "" ? "block" : "none";
+    });
+  });
+</script>
+
+
+  </body>
 </html>
